@@ -43,3 +43,11 @@ if (empty($TMUX))
 endif
 
 autocmd vimenter * ++nested colorscheme gruvbox
+
+" Edit vimrc quickly
+let mapleader = ","
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
+noremap <Space> @q
+
+
