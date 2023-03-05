@@ -3,6 +3,7 @@ call plug#begin()
 " Make sure you use single quotes
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'https://github.com/github/copilot.vim'
 
@@ -47,7 +48,9 @@ autocmd vimenter * ++nested colorscheme gruvbox
 " Edit vimrc quickly
 let mapleader = ","
 nmap <leader>v :tabedit $MYVIMRC<CR>
+" Open NERDTree quickly
+nmap <leader>nt :NERDTreeToggleVCS<cr>
 
 noremap <Space> @q
 
-
+lua require("mason").setup()
